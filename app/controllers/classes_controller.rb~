@@ -21,7 +21,7 @@ class ClassesController < ApplicationController
     @instructorclass.update_attribute(:user_id,current_user.id)
     redirect_to classes_path
  
-    #redirect_to classes_path()
+    #    redirect_to classes_path()
   end
   
   
