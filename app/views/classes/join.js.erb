@@ -1,0 +1,9 @@
+$('#posts').html('<%= escape_javascript render :partial => '/classes/join'%>')
+<% if params[:post] == 'attendance' %>
+  $('.attendence').addClass('active_button');
+  $('.assignments').removeClass('active_button');
+  $('.announcements').removeClass('active_button');
+  $('.profile').removeClass('active_button');
+<% end %>
+$('.replies').removeClass('active_button');
+$('.class').removeClass('active_button');

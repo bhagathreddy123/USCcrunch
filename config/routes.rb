@@ -14,6 +14,7 @@ WebApp::Application.routes.draw do
     get "admin_sign_out", :to => "admin/sessions#destroy",:as => "admin_logout"
   end
 
+  
   namespace :admin do
     resources :dashboards
     resources :schools
@@ -28,6 +29,7 @@ WebApp::Application.routes.draw do
   resources :students do
     collection do
       put :username
+      get :search
     end
   end
 
@@ -39,6 +41,8 @@ WebApp::Application.routes.draw do
       get :invite_students
       post :create_invited_students
       get :graphs
+      get :join
+      get :manage_join
     end
     collection do
       put :switch_theme
@@ -69,16 +73,22 @@ WebApp::Application.routes.draw do
   end
 
   resources :schools do
+    member do
+      get :section
+    end
+    
     resources :students do
       member do
         get :followers
         get :following
         get :posts
+        
       end
     end
     resources :teachers
     resources :upload_csvs do
       collection do
+        
         post :student_upload_csv
         post :teacher_upload_csv
       end

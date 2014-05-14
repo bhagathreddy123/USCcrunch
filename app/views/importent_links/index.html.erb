@@ -18,6 +18,8 @@
     <%= link_to "<button class='side_nav_button posts for_notifications' type=button'>FAQ's<img class='arrow' src='/assets/arrow.png' height='10px' width='10px'></button>".html_safe, class_faqs_path(:school_name => current_user.school_admin.school,:class_id =>@user.id) %>
     <%= link_to "<button class='side_nav_button posts for_notifications' type=button'>Readings<img class='arrow' src='/assets/arrow.png' height='10px' width='10px'></button>".html_safe, class_readings_path(:school_name => current_user.school_admin.school,:class_id =>@user.id) %>
     <%= link_to "<button class='side_nav_button password  active_button' type=button'>Important Links<img class='arrow' src='/assets/arrow.png' height='10px' width='10px'></button>".html_safe, class_importent_links_path(:school_name => current_user.school_admin.school,:class_id =>@user.id) %>
+      <%#= link_to "<button class='side_nav_button password  active_button' type=button'>Student attendence<img class='arrow' src='/assets/arrow.png' height='10px' width='10px'></button>".html_safe, class_importent_links_path(:school_name => current_user.school_admin.school,:class_id =>@user.id) %>
+
   </div>
 
   <%= render :partial => 'profiles/links' %>

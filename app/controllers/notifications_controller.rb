@@ -2,6 +2,7 @@ class NotificationsController < ApplicationController
   before_filter :is_login?
   layout :get_layout
 
+  
   def index
     @posts = Tweet.where("body like '@%' and receiver_id = #{current_user.id} and user_id != #{current_user.id} and post_box IS NULL and users.school_admin_id = '#{current_user.school_admin_id}'").joins("left join users on users.id = tweets.user_id").order('created_at desc').paginate :page => params[:page], :per_page => 8
     respond_to do |format|

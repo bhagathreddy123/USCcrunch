@@ -15,15 +15,13 @@ gem 'will_paginate', '>= 3.0.pre'
 gem 'quiet_assets'
 gem 'thin'
 gem 'aws-sdk'
-
-
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
   gem 'pg'
 end
 
 
-
+gem 'ransack'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,7 +31,7 @@ group :assets do
   
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   #  gem 'therubyracer', :platform => :ruby
-  
+  gem "strong_parameters"
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'jquery-rails', '3.1.0'

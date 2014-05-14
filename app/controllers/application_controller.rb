@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  
   def is_login?
     unless current_user
       flash[:error] = "Please login"

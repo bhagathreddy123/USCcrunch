@@ -16,6 +16,12 @@ class UserMailer < ActionMailer::Base
     @student = student
     mail(:to => student.email, :from => school.email, :subject => "HI")
   end
+  
+#  def sent_student_invitations(school,student)
+#    @school = school
+#    @student = student
+#    mail(:to => student.email, :from => school.email, :subject => "HI")
+#  end
 
   def sent_teacher_invitation(school,teacher)
     @school = school

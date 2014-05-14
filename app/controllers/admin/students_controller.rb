@@ -1,6 +1,7 @@
 class Admin::StudentsController < ApplicationController
   before_filter :is_admin?
   layout :layout?
+  
 
   def show
     @user = User.find(params[:id])

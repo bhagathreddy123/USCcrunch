@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130117115338) do
+ActiveRecord::Schema.define(:version => 20140512084326) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20130117115338) do
     t.string   "question_document_file_name"
     t.string   "question_document_content_type"
     t.integer  "question_document_file_size"
+    t.integer  "class_id"
   end
 
   create_table "favorites", :force => true do |t|
@@ -88,6 +89,37 @@ ActiveRecord::Schema.define(:version => 20130117115338) do
     t.string   "link_document_file_name"
     t.string   "link_document_content_type"
     t.integer  "link_document_file_size"
+    t.integer  "class_id"
+  end
+
+  create_table "instructor_classes", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "syllabus_link_file_name"
+    t.string   "syllabus_link_content_type"
+    t.integer  "syllabus_link_file_size"
+    t.string   "class_photo_file_name"
+    t.string   "class_photo_content_type"
+    t.integer  "class_photo_file_size"
+    t.string   "class_theme"
+    t.string   "class_name"
+    t.text     "syllabus"
+    t.text     "class_description"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "joining_reports", :force => true do |t|
+    t.boolean  "mon"
+    t.boolean  "tue"
+    t.boolean  "wed"
+    t.boolean  "thu"
+    t.boolean  "fri"
+    t.boolean  "sat"
+    t.boolean  "sun"
+    t.integer  "user_id"
+    t.integer  "instructor_class_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "readings", :force => true do |t|
@@ -99,6 +131,7 @@ ActiveRecord::Schema.define(:version => 20130117115338) do
     t.integer  "read_document_file_size"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+    t.integer  "class_id"
   end
 
   create_table "reports", :force => true do |t|
@@ -197,6 +230,8 @@ ActiveRecord::Schema.define(:version => 20130117115338) do
     t.string   "syllabus_link_file_name"
     t.string   "syllabus_link_content_type"
     t.integer  "syllabus_link_file_size"
+    t.string   "contact_no"
+    t.string   "guardian_no"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

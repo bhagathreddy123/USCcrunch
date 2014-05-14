@@ -1,0 +1,73 @@
+<div id="Tweet-summary" style="float: left;
+     left: 14px;top: 3px;
+     position: relative;
+     width: 100%;">
+  <div id="title">Users</div>
+  
+  <%= form_tag search_students_path, :method => "GET" do %>
+  <div class = "field" >
+    <%=text_field_tag :first_name%>
+</div>
+  <div class="actions"><%= submit_tag "Search"  %></div>
+  <% end %>
+    
+  
+  
+  <% if @users.present? %>
+    <table border="1" width="100%">
+      <tr>
+        <th>Student Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>User Name</th>
+        <th>Status</th>
+        <th>Role</th>
+         <th>Student Contact Number</th>
+          <th>Guardian Number</th>
+  
+        <th></th>
+      </tr>
+      <% for school in @users %>
+        <tr style="text-align: center;">
+          <td><%= school.id %></td>
+          <td><%= school.first_name %></td>
+          <td><%= school.last_name %></td>
+          <% if school.reset_password_token == nil %>
+            <td>
+              <%= link_to school.email %>
+            </td>
+          <% else %>
+            <td><%= school.email %></td>
+          <% end %>
+          <% if school.username.present? %>
+            <td><%= school.username.split("@").last %></td>
+          <% else %>
+            <td></td>
+          <% end %>
+          <td>
+            <% if school.reset_password_token == nil %>
+              Joined
+            <% else %>
+              Invitation Sent
+            <% end %>
+          </td>
+          <td><%= school.role %></td>
+          <td><%= school.contact_no %></td>
+          <td> <%=school.guardian_no%> </td>
+          <td>
+            <%#=school.attendece%>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <span style="color: red;font-size: 15px;left: 166px;position: relative;top: 17px;">No Users.</span>
+  <% end %>
+</div><br />
+
+
+
+
+
+ <%= link_to "add new student", new_student_path(:school_id => params[:school_id]) %>

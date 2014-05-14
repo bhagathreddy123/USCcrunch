@@ -16,7 +16,7 @@ module ApplicationHelper
   end
 
   def class_profile_picture
-    if @user.role == 'student'
+    if current_user.role == 'student'
       @user.class_photo.present? ? image_tag(@user.class_photo.url(:original), :class => "profile_pic img-rounded for_cover_photo one_eighty") : image_tag("/assets/profile_pic_student.png", :class => "profile_pic img-rounded for_cover_photo one_eighty")
     else
       @user.class_photo.present? ? image_tag(@user.class_photo.url(:original), :class => "profile_pic img-rounded for_cover_photo one_eighty") : image_tag("/assets/profile_pic_instructor.png", :class => "profile_pic img-rounded for_cover_photo one_eighty")

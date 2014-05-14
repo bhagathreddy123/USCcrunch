@@ -1,5 +1,24 @@
 class StudentsController < ApplicationController
   layout :get_school_layout, :except => ['edit', 'update']
+  
+  
+  
+  def index
+    @users = User.where("role = 'student'")
+    @school = SchoolAdmin.find(params[:school_id])
+  end
+  
+  def invite
+    @school = SchoolAdmin.find(params[:school_id])
+    @student = @school
+    UserMailer.sent_student_invitation(@school,@student).deliver
+  end
+  
+  def search
+    @users = User.where("first_name LIKE '#{params[:first_name]}'")
+    render :action => 'index'
+  end
+  
   def new
     @school = SchoolAdmin.find(params[:school_id])
     @student = @school.users.new

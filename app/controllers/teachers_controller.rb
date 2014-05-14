@@ -1,6 +1,15 @@
 class TeachersController < ApplicationController
   layout :get_school_layout, :except => ['edit', 'update']
 
+  def index
+    @users = User.where("role = 'teacher'")
+  end
+  
+  def search
+    @users = User.where("first_name LIKE '#{params[:first_name]}'")
+    render :action => 'index'
+  end
+      
   def new
     @school = SchoolAdmin.find(params[:school_id])
     @teacher = @school.users.new
@@ -30,7 +39,7 @@ class TeachersController < ApplicationController
       render :text => 'Invalid Token.',:layout => false
     end
   end
-
+  
   def show
     @school = SchoolAdmin.find(params[:school_id])
     @user = User.find(params[:id])

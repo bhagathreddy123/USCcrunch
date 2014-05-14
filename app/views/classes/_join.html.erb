@@ -1,0 +1,17 @@
+<% @users.each do |user|  %>
+  <%= user.username %></br>
+  <%= user.email %>
+
+<% end %>
+<br><br>
+<div>
+  <label for="days[]">Days</label>
+  <%= check_box_tag 'days[]', 'mon' %> MonDay</br>
+  <%= check_box_tag 'days[]', 'tue' %> TuesDay</br>
+  <%= check_box_tag 'days[]', 'wed' %> WednesDay <br> 
+  <%= check_box_tag 'days[]', 'thu' %> ThursDay <br>
+  <%= check_box_tag 'days[]', 'fri' %> FriDay  <br>
+  <%= check_box_tag 'days[]', 'sat' %> SaturDay<br>
+  <%= check_box_tag 'days[]', 'sun' %> SunDay<br>
+</div>
+

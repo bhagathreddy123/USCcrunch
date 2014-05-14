@@ -31,9 +31,10 @@
           <div class="nav-collapse collapse">
             <% if current_school_admin %>
               <ul class="nav" style="margin: -8px 10px 0 0;">
-                <li class="<%=  params[:controller] == "schools" && params[:action] == "show" ? "active" : ""%>"><%= link_to "Dashboard", school_path(@school), :class => "menubanneritem button" %></li>
-                <li class="<%=  params[:controller] == "students" && params[:action] == "new" || params[:action] == 'create' ? "active" : ""%>"><%= link_to "Invite Students", new_school_student_path(@school), :class => "menubanneritem button" %></li>
-                <li class="<%=  params[:controller] == "teachers" && params[:action] == "new" || params[:action] == 'create' ? "active" : ""%>"><%= link_to "Invite Teachers", new_school_teacher_path(@school), :class => "menubanneritem button" %></li>
+                <li class="<%=  params[:controller] == "schools" && params[:action] == "show" ? "active" : ""%>"><%= link_to "Dashboard", school_path(current_school_admin), :class => "menubanneritem button" %></li>
+                <li class="<%=  params[:controller] == "students" && params[:action] == "new" || params[:action] == 'create' ? "active" : ""%>"><%= link_to "Invite Students", new_school_student_path(current_school_admin), :class => "menubanneritem button" %></li>
+                <li class="<%=  params[:controller] == "teachers" && params[:action] == "new" || params[:action] == 'create' ? "active" : ""%>"><%= link_to "Invite Teachers", new_school_teacher_path(current_school_admin), :class => "menubanneritem button" %></li>
+                <li class=" <%= params[:controller] == "classes" && (params[:action] == "index" || params[:action] == 'show' || params[:action] == 'edit' ? "active" : "")%>"><%= link_to "subject", classes_path(:school_name => current_school_admin.school,:id => current_school_admin.id),:class => "menubanneritem button" %></li>
               </ul>
             <% end %>
             <ul class="nav pull-right">
@@ -51,6 +52,7 @@
         <div class="row-fluid">
           <%= yield %>
         </div>
+        
       </div>
     </div>
     <div id='overlay' style='filter:alpha(opacity=50);'></div>
@@ -62,3 +64,5 @@
     <%= render :partial => 'layouts/google_analytics' if Rails.env == 'production' %>
   </body>
 </html>
+
+

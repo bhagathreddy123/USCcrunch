@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
 
 // autoScroll
 $(document).ready(function(){
@@ -201,7 +200,7 @@ function readURL1(input) {
 //ajax pagination
 
 $(function() {
-    $(".pagination a").live("click", function() {
+    $(".pagination a").on("click", function() {
         $.getScript(this.href);
         return false;
     });

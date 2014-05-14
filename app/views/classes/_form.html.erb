@@ -1,0 +1,45 @@
+
+<%=link_to "back",classes_path%>
+
+
+<%= form_for @instructorclass, :url => classes_path(), :method => 'POST' do |f| %>
+
+  <% if  @instructorclass.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize( @instructorclass.errors.count, "error") %> 
+        prohibited this class from being saved:</h2>
+
+      <ul>
+        <%  @instructorclass.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= f.label :user_id, "Select Teacher" %>
+    <%= f.select :user_id, options_for_select([["Select", ""]]+User.where("role = 'teacher'").map{|a| [a.username, a.id]}) %>
+  </div>
+  <div> 
+    <%= f.label :ClassName %>
+    <%=  f.text_field :class_name%>
+  </div>
+
+  <div>       
+    <%= f.label :Description %>
+    <%=  f.text_field:class_description %>
+  </div> 
+
+  <div>         
+    <%= f.label :Syllabus %>
+    <%=  f.text_field:syllabus %>
+  </div> 
+
+  <div> 
+    <%=  f.submit{@instructorclass.new_record? ? "save" : "update" }%>   
+  </div> 
+
+
+
+<%  end %>
+

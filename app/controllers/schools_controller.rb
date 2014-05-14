@@ -5,6 +5,11 @@ class SchoolsController < ApplicationController
     @school = SchoolAdmin.find(params[:id])
     @students = User.where("school_admin_id = '#{current_school_admin.id}'").all
   end
+  
+  def section
+    @school = SchoolAdmin.find(params[:id])
+    @teachers = @school.users.where("role='teacher'")
+  end
 
   def edit
     @school = SchoolAdmin.find(params[:id])

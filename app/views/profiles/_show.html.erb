@@ -8,7 +8,7 @@
       <div class="posts_box" id="post_<%= post.id %>">
         <div style="float:left;clear:both;"><%= post_picture(post) %></div>
         <div class="post">
-          <h5 class="post_name"><%= link_to post.user.fullname,profile_path(:school_name => current_user.school_admin.school,:id =>post.user.id), :style => 'color:black;font-weight:bold;' %></h5>
+          <h5 class="post_name"><%= link_to post.user.fullname,profile_path(:school_name => current_user ? (current_user.school_admin.school) : (current_school_admin.school),:id=>current_user ? current_user.id : current_school_admin.id), :style => 'color:black;font-weight:bold;' %></h5>
           <div class="post_at">&nbsp<%= post.user.username %></div>
           <div class="post_time"><%= time_ago_in_words(post.created_at) %></div>
           <div class="post_text">
@@ -31,6 +31,7 @@
               &nbsp&nbsp
               <%= link_to_function image_tag("/assets/reply_icon.png", :width => '10px', :height => '10px')+'Reply', "reply(#{current_user.id}, #{post.id})" %>
               &nbsp&nbsp
+              
               <% if post.user_id == current_user.id  %>
                 <%= link_to image_tag("/assets/repost_icon.png", :width => '10px', :height => '10px')+'Repost',repost_user_post_path(current_user.id,post.id),:remote => true,:method => 'post' %>
                 &nbsp&nbsp
@@ -64,11 +65,12 @@
     <span style="color: red;font-size: 15px;left: 300px;position: relative;">No <%=  params[:post].present? ? @header : "Posts" %>.</span>
   <% end %>
 </div>
-<% if @posts.total_pages > @posts.current_page %>
-  <div id="more_posts_link">
-    <input type="hidden" value="<%= @posts.current_page+1 %>" id="posts_page" />
-  </div>
-<% end %>
+
+
+
+
+
+
 <div id='ajax' style='z-index:1000000;width:500px;height:120px;display: none;'>
   <div style="float:left;clear:both;">
     <div class="post" style="height: 72px;">
