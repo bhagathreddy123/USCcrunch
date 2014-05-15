@@ -1,3 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?><project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/home_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/home/new_user1.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/models/report.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/home/index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/classes/show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/sessions_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/application_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20140512084326_add_column_to_users.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/layouts/school.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20140430110532_create_joining_reports.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/readings_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/config/database.yml</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/student_reports/new.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/posts/index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/schools/show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20140502072401_addjoin_to_instructor_class.rb</file>
+            <file>file:/home/rails/news/USCcrunch/config/routes.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/student_reports_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/posts/_index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/layouts/eduposts.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/students_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20140514121452_create_student_reports.rb</file>
+            <file>file:/home/rails/news/USCcrunch/db/seeds.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/teachers/new.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/classes/index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/models/instructor_class.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/student_reports/index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/classes/_form.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/student_reports/show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/models/student_report.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/layouts/application.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/teachers/show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/home/new_user2.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/config/s3.yml</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/classes_controller.rb</file>
+        </group>
+    </open-files>
 </project-private>

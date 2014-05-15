@@ -62,7 +62,7 @@
               <% else %>
                 <li><%= link_to image_tag("/assets/class_grey.png", :class => "nav_icon", :height => "20px", :width => "20px")+"Class", classes_path(:school_name => current_user ? (current_user.school_admin.school) : (current_school_admin.school),:id=>current_user ? current_user.id : current_school_admin.id) %></li>
               <% end %>
-                
+                <li><%= link_to image_tag("/assets/class_grey.png", :class => "nav_icon", :height => "20px", :width => "20px")+"reports", new_student_report_path %></li>
                 
                 
             </ul>

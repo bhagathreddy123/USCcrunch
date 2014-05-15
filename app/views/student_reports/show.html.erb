@@ -1,0 +1,36 @@
+
+
+
+<div id="Tweet-summary" style="float: left;
+     left: 14px;top: 3px;
+     position: relative;
+     width: 100%;">
+  <div id="title">Users</div>
+  <% if @studentreport.present? %>
+    <table border="1" width="100%">
+      <tr>
+        <th>studentname</th>
+        <th>studentregno</th>
+        <th>mark1</th>
+        <th>mark2</th>
+        <th>mark3</th>
+        <th>mark4</th>
+        <th>mark5</th>
+          
+
+         
+      </tr>
+          <% for school in @studentreports %>
+        <tr style="text-align: center;">
+          <td><%= school .studentname %></td>
+          <td><%= school .studentregno %></td>
+           <td><%= school .mark1 %></td>
+           <td><%= school .mark2 %></td>
+            <td><%= school .mark3 %></td>
+            <td><%= school .mark4 %></td>
+            <td><%= school .mark5 %></td>
+            
+                           
+     
+    <%= link_to "new",new_student_report_path %> |
+</div><br />

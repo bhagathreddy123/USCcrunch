@@ -1,0 +1,52 @@
+<%= form_for @studentreport do |f| %>
+
+  <% if  @studentreport.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize( @studentreport.errors.count, "error") %> 
+        prohibited this class from being saved:</h2>
+
+      <ul>
+        <%  @studentreport.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div> 
+    <%= f.label :studentname %>
+    <%=  f.text_field  :strudentname %>
+  </div>
+
+  <div>       
+    <%= f.label :studentregno %>
+    <%=  f.text_field  :studentregno %>
+  </div> 
+
+  <div>         
+    <%= f.label :mark1 %>
+    <%=  f.text_field :mark1 %>
+  </div> 
+<div>         
+    <%= f.label :mark2 %>
+    <%=  f.text_field :mark2 %>
+  </div> 
+<div>         
+    <%= f.label :mark3 %>
+    <%=  f.text_field :mark3 %>
+  </div> 
+<div>         
+    <%= f.label :mark4 %>
+    <%=  f.text_field :mark4 %>
+  </div> 
+<div>         
+    <%= f.label :mark5 %>
+    <%=  f.text_field :mark5 %>
+  </div> 
+  <div> 
+    <%=  f.submit{@studentreport.new_record? ? "save" : "update" }%>   
+  </div> 
+
+
+
+<%  end %>

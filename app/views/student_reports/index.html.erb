@@ -1,0 +1,53 @@
+
+<div id="Tweet-summary" style="float: left;
+     left: 14px;top: 3px;
+     position: relative;
+     width: 100%;">
+  <div id="title">Students</div>
+
+  <table border="1" width="100%">
+    <tr>
+      <th>studentname</th>
+      <th>studentregno</th>
+      <th>mark1</th>
+      <th>mark2</th>
+      <th>mark3</th>
+      <th>mark4</th>
+      <th>mark5</th>
+         <th></th>
+    </tr>
+    <% @studentreports.each do |user| %>
+      <tr style="text-align: center;">
+        <td><%= user.strudentname %></td>
+        <td><%= user.studentregno %></td>
+        <td><%= user.mark1 %></td>
+        <td><%= user.mark2 %></td>
+        <td><%= user.mark3 %></td>
+        <td><%= user.mark4 %></td>
+        <td><%= user.mark5 %></td>
+        
+        <td>
+          <%#= link_to 'Show' , class_path(:school_name =>current_school_admin.school,:id =>user.id) %>|
+
+                    
+          
+          
+        
+            <%#= link_to 'Edit' , edit_class_path(:school_name => current_user ? (current_user.school_admin.school) : (current_school_admin.school),:id=>user.id) %>|
+<%#=link_to 'edit', edit_classpath(school_name =>user.user.school_admin.school,:id=>user.id)%>
+            <%#=  link_to "delete", class_path(:school_name => current_user ? (current_user.school_admin.school) : (current_school_admin.school),:id=>user.id
+), :method=>:delete,:data=>{:confirm=>"are u sure?"}%> 
+
+        
+    <%#= link_to 'join' , join_class_path(:school_name => current_user.school_admin.school,:id =>user.id) %>|
+
+            <%#= user.join == false ? (link_to "join", manage_join_class_path(:id =>user.id)) : "Joined" %>
+
+    
+
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div><br />
+  <%= link_to "new",new_student_report_path %>

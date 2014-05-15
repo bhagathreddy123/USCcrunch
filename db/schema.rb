@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140512084326) do
+ActiveRecord::Schema.define(:version => 20140514121452) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -92,6 +92,30 @@ ActiveRecord::Schema.define(:version => 20140512084326) do
     t.integer  "class_id"
   end
 
+  create_table "ins_firsts", :force => true do |t|
+    t.string   "sname"
+    t.integer  "sno"
+    t.integer  "sm1"
+    t.integer  "sm2"
+    t.integer  "sm3"
+    t.integer  "sm4"
+    t.integer  "sm5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "ins_seconds", :force => true do |t|
+    t.string   "s1name"
+    t.integer  "s1no"
+    t.integer  "s1m1"
+    t.integer  "s1m2"
+    t.integer  "s1m3"
+    t.integer  "s1m4"
+    t.integer  "s1m5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "instructor_classes", :force => true do |t|
     t.integer  "user_id"
     t.string   "syllabus_link_file_name"
@@ -104,8 +128,21 @@ ActiveRecord::Schema.define(:version => 20140512084326) do
     t.string   "class_name"
     t.text     "syllabus"
     t.text     "class_description"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
+    t.boolean  "join",                       :default => false
+  end
+
+  create_table "instructorfirst_classes", :force => true do |t|
+    t.string   "name"
+    t.integer  "no"
+    t.integer  "m1"
+    t.integer  "m2"
+    t.integer  "m3"
+    t.integer  "m4"
+    t.integer  "m5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "joining_reports", :force => true do |t|
@@ -166,6 +203,37 @@ ActiveRecord::Schema.define(:version => 20140512084326) do
   add_index "school_admins", ["email"], :name => "index_school_admins_on_email", :unique => true
   add_index "school_admins", ["reset_password_token"], :name => "index_school_admins_on_reset_password_token", :unique => true
   add_index "school_admins", ["slug"], :name => "index_school_admins_on_slug"
+
+  create_table "sections", :force => true do |t|
+    t.string   "name"
+    t.string   "cls"
+    t.string   "teacher"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "student_reports", :force => true do |t|
+    t.string   "strudentname"
+    t.string   "studentregno"
+    t.string   "mark1"
+    t.string   "mark2"
+    t.string   "mark3"
+    t.string   "mark4"
+    t.string   "mark5"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "teachers", :force => true do |t|
+    t.integer  "Tid"
+    t.string   "Tname"
+    t.string   "Class"
+    t.string   "Subjects"
+    t.integer  "Contact"
+    t.string   "Email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "tweets", :force => true do |t|
     t.integer  "user_id"
@@ -230,6 +298,11 @@ ActiveRecord::Schema.define(:version => 20140512084326) do
     t.string   "syllabus_link_file_name"
     t.string   "syllabus_link_content_type"
     t.integer  "syllabus_link_file_size"
+    t.integer  "tid"
+    t.string   "tname"
+    t.string   "teacher_class"
+    t.string   "subject"
+    t.string   "contact"
     t.string   "contact_no"
     t.string   "guardian_no"
   end
