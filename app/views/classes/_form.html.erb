@@ -1,7 +1,6 @@
 
 <%=link_to "back",classes_path%>
 
-
 <%= form_for @instructorclass, :url => classes_path(), :method => 'POST' do |f| %>
 
   <% if  @instructorclass.errors.any? %>

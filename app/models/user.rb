@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
-  attr_accessible :email,:class_photo,:syllabus_link,:readings_attributes,:importent_links_attributes,:faqs_attributes,:school,:class_name,:class_description,:syllabus, :password, :password_confirmation,:terms_of_service, :remember_me,:username,:avatar,:school_admin_id,:role,:bio,:state,:major,:website,:first_name,:last_name,:contact_no, :guardian_no,:reset_password_token
+  attr_accessible :email,:class_photo,:syllabus_link,:readings_attributes,:importent_links_attributes,:faqs_attributes,:school,:class_name,:class_description,:syllabus, :password, :password_confirmation,:terms_of_service, :remember_me,:username,:avatar,:school_admin_id,:role,:bio,:state,:major,:website,:first_name,:last_name,:contact_no, :guardian_no,:subject_name,:reset_password_token
   has_many :tweets, :dependent => :destroy, :order => "created_at DESC"
   has_many :reports, :dependent => :destroy, :order => "created_at DESC"
   has_many :readings, :dependent => :destroy
