@@ -17,20 +17,25 @@
     <table border="1" width="100%">
       <tr>
         <th>Teacher Id</th>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th>TeacherName</th>
+        <th>Classname</th>
+        <th>SubjectName</th>
         <th>Email</th>
         <th>User Name</th>
         <th>Status</th>
         <th>Role</th>
         <th>Teacher Contact Number</th>
-           <th></th>
+
+        <th></th>
       </tr>
       <% for school in @users %>
         <tr style="text-align: center;">
           <td><%= school.id %></td>
           <td><%= school.first_name %></td>
-          <td><%= school.last_name %></td>
+          <td><%= school.class_name %></td>
+          <td><%= school.subject_name %></td>
+
+
           <% if school.reset_password_token == nil %>
             <td>
               <%= link_to school.email, "" %>
@@ -52,7 +57,7 @@
           </td>
           <td><%= school.role %></td>
           <td><%= school.contact_no %></td>
-                  </tr>
+        </tr>
       <% end %>
     </table>
   <% else %>

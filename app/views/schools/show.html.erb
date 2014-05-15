@@ -1,4 +1,4 @@
 Students: <%= link_to User.where("role = 'student'").count, school_students_path(current_school_admin) %>
 Teachers: <%=link_to User.where("role = 'teacher'").count, school_teachers_path(current_school_admin)  %>
-<br/>
+<br/><br>
 <%= link_to "Section", section_school_path(:id => "#{params[:id]}") %>

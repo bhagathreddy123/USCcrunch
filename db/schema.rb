@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140512084326) do
+ActiveRecord::Schema.define(:version => 20140514170231) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -92,6 +92,30 @@ ActiveRecord::Schema.define(:version => 20140512084326) do
     t.integer  "class_id"
   end
 
+  create_table "ins_firsts", :force => true do |t|
+    t.string   "sname"
+    t.integer  "sno"
+    t.integer  "sm1"
+    t.integer  "sm2"
+    t.integer  "sm3"
+    t.integer  "sm4"
+    t.integer  "sm5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "ins_seconds", :force => true do |t|
+    t.string   "s1name"
+    t.integer  "s1no"
+    t.integer  "s1m1"
+    t.integer  "s1m2"
+    t.integer  "s1m3"
+    t.integer  "s1m4"
+    t.integer  "s1m5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "instructor_classes", :force => true do |t|
     t.integer  "user_id"
     t.string   "syllabus_link_file_name"
@@ -106,6 +130,18 @@ ActiveRecord::Schema.define(:version => 20140512084326) do
     t.text     "class_description"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "instructorfirst_classes", :force => true do |t|
+    t.string   "name"
+    t.integer  "no"
+    t.integer  "m1"
+    t.integer  "m2"
+    t.integer  "m3"
+    t.integer  "m4"
+    t.integer  "m5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "joining_reports", :force => true do |t|
@@ -232,6 +268,12 @@ ActiveRecord::Schema.define(:version => 20140512084326) do
     t.integer  "syllabus_link_file_size"
     t.string   "contact_no"
     t.string   "guardian_no"
+    t.integer  "tid"
+    t.string   "tname"
+    t.string   "teacher_class"
+    t.string   "subject"
+    t.string   "contact"
+    t.string   "subject_name"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
