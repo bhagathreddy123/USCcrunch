@@ -1,9 +1,9 @@
-
+<%= link_to "back",profiles_path(:school_name => current_user.school_admin.school)  %>
 <div id="Tweet-summary" style="float: left;
      left: 14px;top: 3px;
      position: relative;
      width: 100%;">
-  <div id="title">Students</div>
+  <div id="title">Students Mark List</div>
 
   <table border="1" width="100%">
     <tr>
@@ -27,11 +27,10 @@
         <td><%= user.mark5 %></td>
         
         <td>
-          <%#= link_to 'Show' , class_path(:school_name =>current_school_admin.school,:id =>user.id) %>|
-
-                    
-          
-          
+          <%= link_to 'Show' , new_student_report_path %>|
+            <%= link_to 'edit' , new_student_report_path %>|         
+               <%= link_to 'delete' ,  student_reports_path %>|  
+               
         
             <%#= link_to 'Edit' , edit_class_path(:school_name => current_user ? (current_user.school_admin.school) : (current_school_admin.school),:id=>user.id) %>|
 <%#=link_to 'edit', edit_classpath(school_name =>user.user.school_admin.school,:id=>user.id)%>
@@ -50,4 +49,4 @@
     <% end %>
   </table>
 </div><br />
-  <%= link_to "new",new_student_report_path %>
+  <%= link_to "Sem1",new_student_report_path %>

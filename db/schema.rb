@@ -11,7 +11,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140514121452) do
+ActiveRecord::Schema.define(:version => 20140514170231) do
+
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -130,18 +131,6 @@ ActiveRecord::Schema.define(:version => 20140514121452) do
     t.datetime "created_at",                                    :null => false
     t.datetime "updated_at",                                    :null => false
     t.boolean  "join",                       :default => false
-  end
-
-  create_table "instructorfirst_classes", :force => true do |t|
-    t.string   "name"
-    t.integer  "no"
-    t.integer  "m1"
-    t.integer  "m2"
-    t.integer  "m3"
-    t.integer  "m4"
-    t.integer  "m5"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "instructorfirst_classes", :force => true do |t|
@@ -316,11 +305,6 @@ ActiveRecord::Schema.define(:version => 20140514121452) do
     t.string   "contact"
     t.string   "contact_no"
     t.string   "guardian_no"
-    t.integer  "tid"
-    t.string   "tname"
-    t.string   "teacher_class"
-    t.string   "subject"
-    t.string   "contact"
     t.string   "subject_name"
   end
 

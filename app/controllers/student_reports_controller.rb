@@ -13,7 +13,7 @@ class StudentReportsController < ApplicationController
       render :new
     end
   end
-  
+         
     def index
     @studentreports =  StudentReport.all
       end
@@ -34,6 +34,6 @@ class StudentReportsController < ApplicationController
   def destroy
     @studentreport = StudentReport.find(params[:id])
     @studentreport.destroy
-    redirect_to new_school_student_report
+    redirect_to student_reports_path
   end
 end
