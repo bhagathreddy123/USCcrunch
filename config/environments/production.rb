@@ -60,7 +60,7 @@ WebApp::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-  config.action_mailer.default_url_options = { :host => 'http://eduposts.com' }
+  config.action_mailer.default_url_options = { :host => 'http://usccrunchrails.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
@@ -76,4 +76,4 @@ WebApp::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
-SITE= 'http://eduposts.com'
+SITE= 'http://usccrunchrails.herokuapp.com'
