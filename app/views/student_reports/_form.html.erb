@@ -1,3 +1,4 @@
+
 <%= form_for @studentreport do |f| %>
 
   <% if  @studentreport.errors.any? %>
@@ -12,41 +13,29 @@
       </ul>
     </div>
   <% end %>
-  
-  <div> 
-    <%= f.label :studentname %>
-    <%=  f.text_field  :studentname %>
+
+  <div>
+    <%= f.label :student_name, "select name" %>
+    <%= f.select :user_id, options_for_select([["select", ""]]+ User.all.map{|a| [a.first_name,a.id]}) %>
+  </div>
+  <div>
+    <%= f.label :mark %>
+    <%= f.text_field :mark %>
+
+  </div>
+  <div>
+    <%= f.label :total %>
+    <%= f.text_field :total %>
+  </div>
+  <div>
+    <%= f.fields_for :studentreportfileuploads, :html => {:multipart => true} do |ff| %>
+      <%= ff.file_field :document %>
+    <% end %> 
+
   </div>
 
-  <div>       
-    <%= f.label :studentregno %>
-    <%=  f.text_field  :studentregno %>
-  </div> 
-
-  <div>         
-    <%= f.label :mark1 %>
-    <%=  f.text_field :mark1 %>
-  </div> 
-<div>         
-    <%= f.label :mark2 %>
-    <%=  f.text_field :mark2 %>
-  </div> 
-<div>         
-    <%= f.label :mark3 %>
-    <%=  f.text_field :mark3 %>
-  </div> 
-<div>         
-    <%= f.label :mark4 %>
-    <%=  f.text_field :mark4 %>
-  </div> 
-<div>         
-    <%= f.label :mark5 %>
-    <%=  f.text_field :mark5 %>
-  </div> 
   <div> 
     <%=  f.submit{@studentreport.new_record? ? "save" : "update" }%>   
   </div> 
-
-
 
 <%  end %>

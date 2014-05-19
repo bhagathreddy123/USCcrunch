@@ -16,7 +16,7 @@
   <% end %>
   <div>
     <%= f.label :user_id, "Select Teacher" %>
-    <%= f.select :user_id, options_for_select([["Select", ""]]+User.where("role = 'teacher'").map{|a| [a.username, a.id]}) %>
+    <%= f.select :user_id, options_for_select([["Select", ""]]+User.where("role = 'teacher'").map{|a| [a.username.split("@").last, a.id]}) %>
   </div>
   <div> 
     <%= f.label :ClassName %>

@@ -2,7 +2,7 @@ class SchoolsController < ApplicationController
   before_filter :is_school?, :except => ['edit', 'update', 'destroy']
   layout :get_school_layout, :except => ['edit', 'update']
   
-  
+
   def show
     @school = SchoolAdmin.find(params[:id])
     @students = User.where("school_admin_id = '#{current_school_admin.id}'").all

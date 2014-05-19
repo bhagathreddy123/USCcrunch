@@ -1,6 +1,15 @@
 WebApp::Application.routes.draw do
 
-  resources :student_reports
+  resources :student_reports  do
+    get :download_file
+  end
+  
+  resources :upload_csvs do
+    collection do
+      post :studentreport_upload_csv
+        
+    end
+  end
 
   devise_for :school_admins,:controllers => {:sessions => 'school_sessions', :passwords => 'school_passwords'}
 
@@ -85,11 +94,16 @@ WebApp::Application.routes.draw do
         get :posts
       end
     end
+
     resources :teachers  do
       member do 
         get :attendence
       end
     end
+
+    resources :teachers 
+      
+
     resources :upload_csvs do
       collection do
         post :student_upload_csv
