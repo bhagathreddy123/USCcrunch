@@ -8,72 +8,105 @@
             <file>file:/home/rails/news/USCcrunch/db/migrate/20140514170231_add_subject_name_to_instructor_class.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/home/index.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/classes/show.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/controllers/sessions_controller.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/controllers/application_controller.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/posts/new.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/classes/new.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/db/migrate/20140430110532_create_joining_reports.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/controllers/schools_controller.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/classes/roster.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/profiles/show.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/home/about.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/config/database.yml</file>
             <file>file:/home/rails/news/USCcrunch/app/views/student_reports/new.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/controllers/posts_controller.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/schools/show.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/students/show.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/student_reports/edit.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/controllers/students_controller.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/students/new.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/controllers/profiles_controller.rb</file>
-            <file>file:/home/rails/news/USCcrunch/db/seeds.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/teachers/new.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/profiles/_conversation.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20140517102129_create_studentreportfileuploads.rb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20130117063509_add_syllabus_link_to_users.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/classes/join.js.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/controllers/teachers_controller.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/student_reports/_form.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/assets/javascripts/application.js</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20140517053719_add_column_to_user.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/classes/index.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/students/index.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/models/school_admin.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/classes/att.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/students/posts.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/profiles/new_compose.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/models/student_report.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/layouts/application.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/controllers/passwords_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/_show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/upload_csvs_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/posts.js.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/teachers/index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/layouts/school.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/readings_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/profiles/report.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/posts/index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/profiles/report_post.js.erb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20121009111931_create_tweets.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/classes/invite_students.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/layouts/eduposts.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/models/user.rb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20140514121452_create_student_reports.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/edit.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/db/schema.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/student_reports/index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/classes/_form.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/followers.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/teachers/show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/school_sessions_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/models/studentreportfileupload.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/home/new_user2.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20140429053443_create_instructor_classes.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/schools/section.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/school_sessions/new.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/sessions_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/application_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/classes/new.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/schools_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/classes/roster.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/config/database.yml</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/posts_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/_posts.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/profiles/_index.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/controllers/students_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/new.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/helpers/application_helper.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/upload_csvs/_upload_csv.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/db/seeds.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/classes/_graphs.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/teachers/new.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/student_reports/_form.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/models/reading.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/models/school_admin.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/profiles/_show.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/students/following.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/controllers/classes_controller.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/profiles/show.js.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/controllers/home_controller.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/home/new_user1.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/schools/_form.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/profiles/post.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/home/contact.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/teachers/index.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/controllers/importent_links_controller.rb</file>
             <file>file:/home/rails/news/USCcrunch/db/migrate/20140512084326_add_column_to_users.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/layouts/school.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/classes/graphs.js.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/controllers/readings_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20130109064850_change_question_to_faq.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/schools/edit.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/classes/manage_join.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/controllers/notifications_controller.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/posts/index.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/classes/invite_students.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/db/migrate/20140502072401_addjoin_to_instructor_class.rb</file>
             <file>file:/home/rails/news/USCcrunch/config/routes.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/controllers/student_reports_controller.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/models/tweet.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/posts/_index.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/classes/edit.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/layouts/eduposts.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/teachers/edit.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/models/user.rb</file>
-            <file>file:/home/rails/news/USCcrunch/db/migrate/20140514121452_create_student_reports.rb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/classes/_join.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/db/schema.rb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/student_reports/index.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/classes/_form.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/db/migrate/20130109065510_change_link_to_importent_links.rb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/upload_csvs/_teacher_upload_csv.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/student_reports/show.html.erb</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/teachers/show.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/app/views/posts/_form.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/Gemfile</file>
-            <file>file:/home/rails/news/USCcrunch/app/views/home/new_user2.html.erb</file>
+            <file>file:/home/rails/news/USCcrunch/app/views/upload_csvs/_studentreport_upload_csv.html.erb</file>
             <file>file:/home/rails/news/USCcrunch/config/s3.yml</file>
         </group>
     </open-files>

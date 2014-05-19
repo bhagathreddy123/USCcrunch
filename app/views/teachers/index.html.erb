@@ -20,12 +20,12 @@
         <th>TeacherName</th>
         <th>Classname</th>
         <th>SubjectName</th>
-        <th>Email</th>
-        <th>User Name</th>
-        <th>Status</th>
-        <th>Role</th>
-        <th>Teacher Contact Number</th>
-
+             <th>Examname</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Status</th>
+                  <th>Role</th>
+             <th>Teacher Contact Number</th>
         <th></th>
       </tr>
       <% for school in @users %>
@@ -34,6 +34,7 @@
           <td><%= school.first_name %></td>
           <td><%= school.class_name %></td>
           <td><%= school.subject_name %></td>
+          <td><%= school.exam_name  %>
 
 
           <% if school.reset_password_token == nil %>

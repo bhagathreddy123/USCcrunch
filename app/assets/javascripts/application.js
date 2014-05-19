@@ -34,6 +34,12 @@ function add_fields(link, association, content) {
     $(link).parent().before(content.replace(regexp, new_id));
 }
 
+
+
+
+
+
+
 function get_username(ht){
     $.ajax({
         url:"/students/username",

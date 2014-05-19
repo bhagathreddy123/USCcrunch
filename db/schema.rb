@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140514170231) do
+ActiveRecord::Schema.define(:version => 20140517102129) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -213,15 +213,22 @@ ActiveRecord::Schema.define(:version => 20140514170231) do
   end
 
   create_table "student_reports", :force => true do |t|
-    t.string   "strudentname"
-    t.string   "studentregno"
-    t.string   "mark1"
-    t.string   "mark2"
-    t.string   "mark3"
-    t.string   "mark4"
-    t.string   "mark5"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "mark"
+    t.integer  "total"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "studentreportfileuploads", :force => true do |t|
+    t.integer  "student_report_id"
+    t.text     "body"
+    t.string   "document_content_type"
+    t.string   "document_file_name"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
   create_table "teachers", :force => true do |t|
@@ -306,6 +313,7 @@ ActiveRecord::Schema.define(:version => 20140514170231) do
     t.string   "contact_no"
     t.string   "guardian_no"
     t.string   "subject_name"
+    t.string   "exam_name"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

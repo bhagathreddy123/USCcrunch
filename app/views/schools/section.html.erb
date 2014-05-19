@@ -1,10 +1,8 @@
 
-
-
-<% @teachers.each do |teacher| %>
-<p>
-  <%= teacher.email %>
- 
-</p>
-<% end %>
-
+ <%= form_tag search_students_path, :method => "GET" do %>
+  <div class = "field" >
+    <%=text_field_tag :class_name%>
+</div>
+  <div class="actions"><%= submit_tag "Search"  %></div>
+  <% end %>
+    
