@@ -77,18 +77,20 @@ WebApp::Application.routes.draw do
     member do
       get :section
     end
-   
+     
     resources :students do
       member do
         get :followers
         get :following
         get :posts
-        
       end
     end
-    resources :teachers 
-      
-       resources :upload_csvs do
+    resources :teachers  do
+      member do 
+        get :attendence
+      end
+    end
+    resources :upload_csvs do
       collection do
         post :student_upload_csv
         post :teacher_upload_csv

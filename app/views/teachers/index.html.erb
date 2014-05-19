@@ -3,16 +3,12 @@
      position: relative;
      width: 100%;">
   <div id="title">Users</div>
-
   <%= form_tag search_students_path, :method => "GET" do %>
     <div class = "field" >
       <%=text_field_tag :first_name%>
     </div>
     <div class="actions"><%= submit_tag "Search"  %></div>
   <% end %>
-
-
-
   <% if @users.present? %>
     <table border="1" width="100%">
       <tr>
@@ -25,7 +21,7 @@
         <th>Status</th>
         <th>Role</th>
         <th>Teacher Contact Number</th>
-
+        <th>Attendence</th>
         <th></th>
       </tr>
       <% for school in @users %>
@@ -57,6 +53,7 @@
           </td>
           <td><%= school.role %></td>
           <td><%= school.contact_no %></td>
+          <td><%=link_to "Attendence reports", attendence_school_teacher_path(current_school_admin,school.id )%></td>
         </tr>
       <% end %>
     </table>

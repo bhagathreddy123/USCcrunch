@@ -3,3 +3,4 @@ class AddSubjectNameToInstructorClass < ActiveRecord::Migration
     add_column :users, :subject_name, :string
   end
 end
+

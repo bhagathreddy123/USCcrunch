@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
   layout :get_school_layout, :except => ['edit', 'update']
   
-  
+
   
   def index
     @users = User.where("role = 'student'")

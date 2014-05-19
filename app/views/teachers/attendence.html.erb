@@ -1,0 +1,22 @@
+<%= form_tag root_path do %>
+
+  <table border="1" width="100%">
+    <tr>
+      <th>Student Name</th>
+      <% for day in (Date.today..(Date.today+7.days)).to_a %>
+        <td><%=day %></td>
+      <% end %>
+    </tr>
+    <% for school in @users %>
+      <tr> 
+        <% if school.role == 'student' %>
+          <td><%= school.first_name %></td>
+          <% for day in (Date.today..(Date.today+7.days)).to_a %>
+            <td><%= check_box_tag "student_dates[]",@teacher.id.to_s+","+school.id.to_s+","+day.to_s,false %></td>
+          <% end %>
+        <%end%>
+      </tr>
+    <% end %>
+  </table>
+  <%= submit_tag "sub" %>
+<% end %>

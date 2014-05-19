@@ -1,6 +1,18 @@
 class TeachersController < ApplicationController
   layout :get_school_layout, :except => ['edit', 'update']
 
+  def attendence
+    @users = User.all
+    #@users = User.where("role = 'teacher'")
+    @school = SchoolAdmin.find(params[:school_id])
+    @teacher = User.find(params[:id])
+    @start_date = Date.today.beginning_of_week(start_day = :monday)
+    @end_date = Date.today.beginning_of_week+5.days
+    @date = Date.today
+    #  @date = params[:month] ? Date.parse(params[:month]) : Date.today
+  end  
+  
+  
   def index
     @users = User.where("role = 'teacher'")
   end
@@ -73,3 +85,7 @@ class TeachersController < ApplicationController
     end
   end
 end
+
+
+
+
