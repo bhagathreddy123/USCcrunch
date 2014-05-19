@@ -66,9 +66,9 @@ WebApp::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     #:domain               => 'baci.lindsaar.net',
-    :user_name            => 'rails.dev.app@gmail.com',
-    :password             => 'pa55w0rd!@#',
-    :authentication       => 'plain',
+    :user_name            => 'katta04.bhagath@gmail.com',
+    :password             => 'manjrekar',
+    :authentication       => 'login',
     :enable_starttls_auto => true
   }
 
